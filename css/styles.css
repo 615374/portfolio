@@ -399,7 +399,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* HABILIDADES CON ÍCONOS REFORZADOS */
+/* HABILIDADES */
 .filtros-skills {
     display: flex;
     justify-content: center;
@@ -464,7 +464,7 @@ main {
         box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
     }
 
-/* PROYECTOS (ESTRUCTURA Y RESTRICCIÓN DE IMÁGENES) */
+/* PROYECTOS */
 .grid-proyectos-destacados {
     display: flex;
     flex-direction: column;
@@ -478,7 +478,7 @@ main {
     border: 1px solid var(--color-borde);
     backdrop-filter: blur(12px);
     border-radius: 16px;
-    overflow: hidden; /* Corta la imagen para que no desborde */
+    overflow: hidden; 
     transition: var(--transicion);
     display: flex;
     flex-direction: column;
@@ -500,19 +500,19 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px; /* Margen interno para que respire la imagen */
+    padding: 12px; 
     flex-shrink: 0;
 }
 
-/* Imagen ajustada para verse 100% COMPLETA sin recortes */
+/* Imagen del Proyecto */
 .proyecto-img {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain !important; /* Muestra la captura completa sin cortar nada */
-    border-radius: 8px; /* Redondeado sutil para la captura */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    object-fit: contain !important; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     transition: transform 0.4s ease;
 }
 
@@ -667,11 +667,41 @@ main {
     color: var(--color-texto-secundario);
 }
 
-/* RESPONSIVE DESKTOP UNIFICADO */
+/* Selector de Idioma en la Nav */
+.lang-switch-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+}
+
+.btn-lang {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px 4px;
+    transition: color 0.3s ease;
+}
+
+    .btn-lang.active,
+    .btn-lang:hover {
+        color: #a855f7; 
+    }
+
+.lang-divider {
+    color: #444;
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVE DESKTOP */
 @media (min-width: 768px) {
     .tarjeta-proyecto.proyecto-destacado {
         display: grid;
-        grid-template-columns: 380px 1fr; /* Columna de 380px para dar más espacio a la captura */
+        grid-template-columns: 380px 1fr; 
         align-items: center;
     }
 
