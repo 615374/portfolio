@@ -180,8 +180,8 @@ main {
     padding: 8px 16px;
     border-radius: 9999px;
     display: inline-block;
-    border: 1px solid transparent; 
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+    border: 1px solid transparent;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
     .nav-menu a:hover {
@@ -298,11 +298,8 @@ main {
 }
 
 .marco-estetico:hover {
-    /* Zoom suave al contenedor */
     transform: scale(1.04);
-    /* Fondo con gradiente más intenso en hover */
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.8), rgba(59, 130, 246, 0.6));
-    /* Resplandor neón flotante por detrás (Glow multinivel) */
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.5), 0 0 50px rgba(168, 85, 247, 0.25);
 }
 
@@ -458,24 +455,20 @@ main {
     border: 1px solid var(--color-borde);
     backdrop-filter: blur(12px);
     border-radius: 12px;
-    padding: 14px 10px;
+    padding: 18px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
     transition: var(--transicion);
 }
-
-    .skill-card i, .red-card i {
-        font-size: 2.8rem;
-        display: inline-block;
-        line-height: 1;
-    }
 
     .skill-card span {
         font-size: 0.82rem;
         color: var(--color-texto-principal);
         font-weight: 400;
+        text-align: center;
     }
 
     .skill-card:hover {
@@ -483,6 +476,26 @@ main {
         transform: translateY(-3px);
         box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
     }
+
+/* Regla para las imágenes SVG de íconos de Habilidades */
+.skill-img, .svg-skill {
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-img,
+.skill-card:hover .svg-skill {
+    transform: scale(1.12);
+}
+
+/* Invertir íconos totalmente negros (Express y GitHub) para que se vean sobre fondo oscuro */
+.icon-invert, .express-icon, .github-icon {
+    filter: invert(1) brightness(2);
+}
 
 /* PROYECTOS */
 .grid-proyectos-destacados {
@@ -492,13 +505,12 @@ main {
     margin-bottom: 55px;
 }
 
-/* Tarjeta Base de Proyecto */
 .tarjeta-proyecto {
     background: var(--color-tarjeta);
     border: 1px solid var(--color-borde);
     backdrop-filter: blur(12px);
     border-radius: 16px;
-    overflow: hidden; 
+    overflow: hidden;
     transition: var(--transicion);
     display: flex;
     flex-direction: column;
@@ -510,7 +522,6 @@ main {
         box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
     }
 
-/* Caja contenedora de la imagen */
 .proyecto-imagen-box {
     width: 100%;
     height: 220px;
@@ -520,19 +531,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px; 
+    padding: 12px;
     flex-shrink: 0;
 }
 
-/* Imagen del Proyecto */
 .proyecto-img {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain !important; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    object-fit: contain !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease;
 }
 
@@ -540,7 +550,6 @@ main {
     transform: scale(1.03);
 }
 
-/* Información del Proyecto */
 .proyecto-info {
     padding: 32px;
     display: flex;
@@ -566,7 +575,6 @@ main {
         color: var(--color-texto-principal);
     }
 
-/* Botones de Acción */
 .proyecto-acciones {
     display: flex;
     flex-wrap: wrap;
@@ -574,7 +582,6 @@ main {
     margin-top: 8px;
 }
 
-/* Otros Repositorios */
 .subtitulo-otros {
     font-family: var(--fuente-titulos);
     font-size: 1.4rem;
@@ -622,18 +629,6 @@ main {
 .svg-icon {
     width: 22px;
     height: 22px;
-}
-
-/* Tamaño de SVGs de habilidades */
-.svg-skill {
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover .svg-skill {
-    transform: scale(1.12);
 }
 
 /* FORMULARIO */
@@ -709,7 +704,7 @@ main {
 
     .btn-lang.active,
     .btn-lang:hover {
-        color: #a855f7; 
+        color: #a855f7;
     }
 
 .lang-divider {
@@ -721,7 +716,7 @@ main {
 @media (min-width: 768px) {
     .tarjeta-proyecto.proyecto-destacado {
         display: grid;
-        grid-template-columns: 380px 1fr; 
+        grid-template-columns: 380px 1fr;
         align-items: center;
     }
 
